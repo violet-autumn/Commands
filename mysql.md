@@ -1,6 +1,6 @@
 ### MYSQL Commands
 
-##### Connecting to a MySQL instance from gcloud
+##### Connecting to a CloudSQL instance from gcloud
 ```
 gcloud sql connect <instance-name> --user=root --quiet
 ```
@@ -51,4 +51,19 @@ DESC;
 SHOW CREATE TABLE <table-name>;
 ```
 
+##### Create a new table
+```
+CREATE TABLE <table-name> (
+<column-1> <datatype-of-column-1>,
+<column-1> <datatype-of-column-1>,
+PRIMARY KEY (<column-name>)
+);
+```
+
+##### Insert data in a table
+```
+INSERT INTO <table-name> (<column-1>, <column-2>)
+VALUES (<data-1>, <data-2>);
+```
+```
 

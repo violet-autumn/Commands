@@ -65,5 +65,3 @@ PRIMARY KEY (<column-name>)
 INSERT INTO <table-name> (<column-1>, <column-2>)
 VALUES (<data-1>, <data-2>);
 ```
-```
-

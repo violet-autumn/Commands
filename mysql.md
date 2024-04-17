@@ -40,7 +40,10 @@ SELECT
 FROM
   information_schema.TABLES
 WHERE 
-  TABLE_SCHEMA = @dbname;
+  TABLE_SCHEMA = @dbname
+ORDER BY
+  (DATA_LENGTH + INDEX_LENGTH)
+DESC;
 ```
 
 ##### Show the DDL of a specific table

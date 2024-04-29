@@ -13,7 +13,7 @@ USE <database-name>;
 
 ##### Store database name in a variable 
 ```
-SELECT @dbname:='<database-name>';
+SET @dbname:='<database-name>';
 ```
 
 ##### Show the total size of a database
@@ -29,6 +29,17 @@ WHERE
 ##### Show all tables in the database
 ```
 SHOW TABLES;
+```
+
+##### Show all tables in the database along with their primary keys
+```
+SELECT
+  TABLE_NAME as `Table`,
+  COLUMN_NAME as `Primary Key(s)`
+FROM
+  information_schema.COLUMNS
+WHERE
+  COLUMN_KEY='PRI' and TABLE_SCHEMA=@dbname;
 ```
 
 ##### Show the name and size of all the tables (in MB) in the database
